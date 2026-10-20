@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domuscire</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="jogo">
+
+    <!-- Menu -->
+    <section id="menu" class="tela ativa">
+      <h1 class="titulo">domuscire</h1>
+      <p class="sub">residência experimental</p>
+      <nav class="botoes">
+        <button id="b-novo">Iniciar jogo novo</button>
+        <button id="b-carregar">Carregar jogo</button>
+        <button id="b-config">Configurações</button>
+        <button id="b-creditos">Créditos</button>
+      </nav>
+    </section>
+
+    <!-- Configurações -->
+    <section id="config" class="tela">
+      <h2>Configurações</h2>
+      <label>Velocidade do texto
+        <input type="range" id="c-vel" min="1" max="5" step="1">
+      </label>
+      <label><input type="checkbox" id="c-som"> Efeitos sonoros</label>
+      <button class="voltar">Voltar</button>
+    </section>
+
+    <!-- Créditos -->
+    <section id="creditos" class="tela">
+      <h2>Créditos</h2>
+      <p>milps julips</p>
+      <button class="voltar">Voltar</button>
+    </section>
+
+    <!-- Cutscene -->
+    <section id="cutscene" class="tela">
+      <div id="palco" class="cena-0">
+        <div class="cidade"></div>
+        <div class="casa"></div>
+        <div id="titulo-intro" class="titulo">domuscire</div>
+      </div>
+      <div id="caixa-intro" class="caixa"></div>
+      <p class="dica">clique ou pressione espaço para avançar</p>
+    </section>
+
+    <!-- Jogo -->
+    <section id="partida" class="tela">
+      <header id="hud">
+        <div id="habilidades"></div>
+        <div id="led" title="Nível de alerta da casa"></div>
+      </header>
+
+      <div id="sala">
+        <button class="obj" id="o-terminal"><span>▣</span>Terminal</button>
+        <button class="obj" id="o-interruptor"><span>◐</span>Interruptor</button>
+        <button class="obj" id="o-painel"><span>▤</span>Painel de energia</button>
+        <button class="obj" id="o-vaso"><span>♣</span>Vaso</button>
+        <button class="obj" id="o-porta"><span>▯</span>Porta de entrada</button>
+      </div>
+
+      <div id="aviso"></div>
+      <div id="caixa-jogo" class="caixa"></div>
+      <div id="opcoes"></div>
+
+      <div id="fim" class="oculto">
+        <h2 id="fim-titulo"></h2>
+        <p id="fim-texto"></p>
+        <button id="b-menu">Voltar ao menu</button>
+      </div>
+    </section>
+
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
